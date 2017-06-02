@@ -1,0 +1,55 @@
+{
+  "name": "react-typescript-electron-web-quickstart",
+  "version": "1.0.0",
+  "description": "A quick start example with configured ReactJS, Webpack, Electron and even Web deployment",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server -d --inline --progress --no-info --open",
+    "clean": "rimraf dist/",
+    "build": "cross-env NODE_ENV=production webpack -p && node_modules\\.bin\\electron-packager dist \"SPDocKitInsights\"  --version-string.FileDescription=\"SPDocKit Insights\" --version-string.ProductName=\"SPDocKit Insights\" --version-string.LegalCopyright=\"Copyright © Acceleratio Ltd. 2017\" --version-string.CompanyName=\"Acceleratio Ltd.\" --version-string.OriginalFilename=\"SPDocKitInsights.exe\" --icon electron\\SPDocKitInsights.ico --platform=win32 --arch=x64 --asar --out=electronDist\\bin --overwrite --build-version=7.0.0.0",
+    "runElectron": "cross-env NODE_ENV=production webpack -p && node_modules\\.bin\\electron .\\dist"
+  },
+  "keywords": [
+    "Electron",
+    "Typescript",
+    "Webpack",
+    "React",
+    "Redux"
+  ],
+  "author": "Hrvoje Bagaric",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "7.0.22",
+    "awesome-typescript-loader": "3.1.3",
+    "babel-preset-es2015": "6.24.1",
+    "babili-webpack-plugin": "0.1.1",
+    "copy-webpack-plugin": "4.0.1",
+    "cross-env": "5.0.0",
+    "css-loader": "0.28.2",
+    "html-webpack-plugin": "2.28.0",
+    "raw-loader": "0.5.1",
+    "sass-loader": "6.0.5",
+    "style-loader": "^0.18.1",
+    "tslint": "5.3.2",
+    "tslint-loader": "3.5.3",
+    "typescript": "^2.3.3",
+    "url-loader": "0.5.8",
+    "webpack": "2.6.1",
+    "webpack-dev-server": "2.4.5",
+    "webpack-split-by-path": "2.0.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "classnames": "^2.2.5",
+    "node-sass": "^4.5.3",
+    "react": "15.5.4",
+    "react-dom": "15.5.4",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "2.2.0",
+    "ts-helpers": "1.1.2"
+  }
+}
