@@ -1,0 +1,9 @@
+{
+  "name": "starter-electron-app",
+  "version": "1.0.0",
+  
+  "description": "Electron application for react-typescript-electron-web-quickstart project.",
+  "main": "electronApp.js",
+  
+  "author": "Hrvoje Bagaric"  
+}
