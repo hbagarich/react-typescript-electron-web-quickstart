@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server -d --inline --progress --no-info --open",
     "clean": "rimraf dist/",
-    "build": "cross-env NODE_ENV=production webpack -p && node_modules\\.bin\\electron-packager dist \"SPDocKitInsights\"  --version-string.FileDescription=\"SPDocKit Insights\" --version-string.ProductName=\"SPDocKit Insights\" --version-string.LegalCopyright=\"Copyright © Acceleratio Ltd. 2017\" --version-string.CompanyName=\"Acceleratio Ltd.\" --version-string.OriginalFilename=\"SPDocKitInsights.exe\" --icon electron\\SPDocKitInsights.ico --platform=win32 --arch=x64 --asar --out=electronDist\\bin --overwrite --build-version=7.0.0.0",
-    "runElectron": "cross-env NODE_ENV=production webpack -p && node_modules\\.bin\\electron .\\dist"
+    "build": "cross-env NODE_ENV=production webpack -p",
+    "runElectron": "cross-env NODE_ENV=production webpack -p && node_modules\\.bin\\electron .\\dist",
+    "buildElectron": "node_modules\\.bin\\electron-packager ./dist SySKitShell --production=win32 --arch=x64 --asar=true --appVersion=0.0.1 --out=dist\\release-build\\ --overwrite",
+    "buildRelease": "npm run build && node_modules\\.bin\\electron-packager ./dist SySKitShell --production=win32 --arch=x64 --asar=true --appVersion=0.0.1 --out=dist\\release-build\\ --overwrite"
   },
   "keywords": [
     "Electron",

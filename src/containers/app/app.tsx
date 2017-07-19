@@ -61,4 +61,4 @@ class App extends React.Component<IAppProps, void> {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(App as any);
